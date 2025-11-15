@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey & Feedback Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: #f3f3f7;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      background: #fafafa;
+      transition: border 0.3s ease, transform 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #8a5cff;
+      outline: none;
+      transform: scale(1.01);
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .rating {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .rating input[type="radio"] {
+      display: none;
+    }
+
+    .rating label {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .rating input[type="radio"]:checked + label {
+      background: #8a5cff;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #8a5cff;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      background: #7649e6;
+      transform: translateY(-3px);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 25px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Survey & Feedback Form</h1>
+    <form>
+      <div class="section-title">User Information</div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" min="1" max="100" placeholder="Enter your age" />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="nonbinary">Non-Binary</option>
+          <option value="prefernot">Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="section-title">Rate Your Experience</div>
+
+      <div class="form-group">
+        <label>Overall Satisfaction</label>
+        <div class="rating">
+          <input type="radio" id="r1" name="rating" value="1" />
+          <label for="r1">1</label>
+
+          <input type="radio" id="r2" name="rating" value="2" />
+          <label for="r2">2</label>
+
+          <input type="radio" id="r3" name="rating" value="3" />
+          <label for="r3">3</label>
+
+          <input type="radio" id="r4" name="rating" value="4" />
+          <label for="r4">4</label>
+
+          <input type="radio" id="r5" name="rating" value="5" />
+          <label for="r5">5</label>
+        </div>
+      </div>
+
+      <div class="section-title">Your Feedback</div>
+
+      <div class="form-group">
+        <label for="feedback">Tell us about your experience</label>
+        <textarea id="feedback" placeholder="Be honest"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="suggestions">Any suggestions?</label>
+        <textarea id="suggestions" placeholder="We'd love to hear your ideas"></textarea>
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>
