@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parisha - My Personal Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: #c86d05;
+      padding: 15px 50px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 450;
+      transition: color 0.3s ease;
+      font-size: 17px;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .home {
+      background: linear-gradient(to right, #e47070, #79bdee);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid var(--primary-color);
+    }
+
+    .home h1 {
+      font-size: 2.5rem;
+    }
+
+    .home span {
+      color: #e8c91a;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffd700;
+      color: #004aad;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 62px 50px;
+      text-align: center;
+    }
+
+    .section.light {
+      background: #d9bff2;
+    }
+
+    .section h2 {
+      margin-bottom: 40px;
+      color: #062347;
+      font-size: 2rem;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .content img {
+      width: 220px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .text, .education, .skills {
+      max-width: 850px;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .edu-list li {
+      margin: 13px 0;
+    }
+
+    .skill-list li {
+      margin: 20px 0;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+          
+        }
+
+    .project-card h3 {
+      margin-top: 15px;
+      color: #004aad;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #004aad;
+      font-weight: bold;
+    }
+
+    .contact-info {
+      text-align: center;
+      line-height: 2;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-links a:hover {
+      color: #0077cc;
+    }
+
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .home h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 40px 20px;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2 class="logo">Parisha Gupta</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Education and Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-text">
+      <img src="picture.jpg" alt="Profile Picture" class="profile-pic">
+      <h1>I'm <span>Parisha Gupta</span></h1>
+      <p>A passionate beginner Web Designer.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="content">
+      
+      <div class="text">
+        <p>
+      I'm currently pursuing the B.Tech course, CSE from DTU. I'm a tech enthusiast who loves creating user-friendly websites and interactive digital experiences. I enjoy learning new technologies and continuously improving my skills. 
+      </p> <br> <p>
+      I am insterested in learning coding languges like C++ and Python. Also, I aspire to become an expert Web Developer.
+        </p><br><p>
+          Outside studying, I enjoy watching TV shows, reading books and watching Formula 1.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section light">
+    <h2>Education & Skills</h2>
+    <div class="content">
+      <div class="education">
+        <h3><u>Education</u></h3>
+        <ul class="edu-list">
+          <li><strong>High School</strong> - 
+            <ul style="list-style-type:none;">
+                <li>Science Stream</li>
+                <li>Amity International School, Mayur Vihar</li> 
+                <li> 2023-2025</li>
+            </ul></li>
+          <li><strong>Bachelor of Technology</strong> - 
+                <ul style="list-style-type:none;">
+                    <li>CSE - 1<sup>st</sup> Year</li>
+                    <li>Delhi Technological University</li> 
+                
+            </ul></li>
+          
+        </ul>
+      </div>
+      <div class="skills">
+        <h3><u>Skills</u></h3>
+        <ul class="skill-list" style="list-style-type: square;">
+          <li>HTML / CSS</li>
+          <li>C </li>
+          <li>UI/UX Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3> <br>
+        <p>A personal website built with HTML and CSS to showcase my skills and work.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Feed Back Form</h3> <br>
+        <p>A simple Feed Back Form designed using CSS and HTML</p>
+        <br>
+        <a href="feed-back-form.html" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>More Projects Coming Soon!</h3> <br>
+        <p>Stay Tuned</p>
+       
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="section light">
+    <h2>Contact Information</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> parsgup@gmail.com</p>
+      <p><strong>Phone:</strong> +91 99995 96390</p>
+      <p><strong>Location:</strong> Delhi, India</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/parisha-gupta-a220a2399" target="_blank"><img src="linkedin.png" alt="linkedin" height="40 px"></a>
+        <a href="https://github.com/parisha-g-07" target="_blank"><img src="github.jpg" alt="github" height="40 px"></a>
+        <a href="https://www.instagram.com/parishag07?igsh=YW96ZDY0NDQ5ZWVx&utm_source=qr" target="_blank"><img src="insta.webp" alt="github" height="40 px"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 | Parisha Gupta | All rights reserved |</p>
+  </footer>
+</body>
+</html>
